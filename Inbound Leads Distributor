@@ -1,0 +1,1893 @@
+{
+  "nodes": [
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.Segment }}",
+                    "rightValue": "COMP/IND_ACC (Not Connected)",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "18f52ab0-9ccd-4b5d-86c2-41521c223718"
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "7fadda74-ef9a-4d30-b969-28d3c2dd72d2",
+                    "leftValue": "={{ $json.Segment }}",
+                    "rightValue": "INV_NUM (Not Connected)",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "b5adc1f8-233c-4f89-aed5-0bd3d115d727",
+                    "leftValue": "={{ $json.Segment }}",
+                    "rightValue": "MAIL_ONLY (Connected)",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "9066d972-2b3a-42ac-98a6-2d0e3e6fe890",
+                    "leftValue": "={{ $json.Segment }}",
+                    "rightValue": "PAID_ACC (Not Connected)",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "ad1d0a65-9de1-4492-b720-a211c9fcda6c",
+                    "leftValue": "={{ $json.Segment }}",
+                    "rightValue": "Connected (Transferred to Sales)",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        1136,
+        320
+      ],
+      "id": "ca20e0a2-5042-4ef0-9c25-71deeeb12d46",
+      "name": "Owner A"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json[\"First Touch OE\"] }}",
+                    "rightValue": "Utkarsh",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "11074332-3bed-4d3d-bce0-ad2fed287155"
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "52bc7b19-7fbc-4577-8ed2-3628b9eab7f4",
+                    "leftValue": "={{ $json[\"First Touch OE\"] }}",
+                    "rightValue": "Srishti",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        384,
+        1488
+      ],
+      "id": "c65f8936-7495-4c67-86b9-f4e74e7e1d58",
+      "name": "Switch Owner"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        176,
+        1856
+      ],
+      "id": "69a1691f-0daa-4fe0-8ba2-3e4ca0807946",
+      "name": "Loop Over Items"
+    },
+    {
+      "parameters": {
+        "content": "## Owner: Srishti\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "height": 1056,
+        "width": 1040,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        912,
+        1232
+      ],
+      "typeVersion": 1,
+      "id": "0babcc54-d810-451a-8ce1-448fe9160601",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "content": "## Owner: Utkarsh\n",
+        "height": 1008,
+        "width": 1024,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1104,
+        80
+      ],
+      "typeVersion": 1,
+      "id": "5efa05ab-ce23-4659-b12e-e6577a3028aa",
+      "name": "Sticky Note3"
+    },
+    {
+      "parameters": {
+        "sendHTML": true,
+        "subject": "={{ $json.subject }}",
+        "htmlContent": "={{ $json.body }}",
+        "sender": "srishti.k@utho.io",
+        "receipients": "={{ $json.email }}",
+        "additionalFields": {},
+        "requestOptions": {}
+      },
+      "type": "n8n-nodes-base.sendInBlue",
+      "typeVersion": 1,
+      "position": [
+        1408,
+        1760
+      ],
+      "id": "a9b0db00-4e5d-4066-b747-7650d877dfeb",
+      "name": "Send email by Srishti",
+      "retryOnFail": true,
+      "credentials": {
+        "sendInBlueApi": {
+          "id": "GRqFRLkcv28HZWJi",
+          "name": "Brevo account"
+        }
+      },
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "12WLhD_OL1tg_sGXGCFj-l7wadaSgFkZPkbxPrSW2Ol4",
+          "mode": "list",
+          "cachedResultName": "Mailing Data (Signup Leads ) - Inbound ",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/12WLhD_OL1tg_sGXGCFj-l7wadaSgFkZPkbxPrSW2Ol4/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 731799384,
+          "mode": "list",
+          "cachedResultName": "Auto Mailer ",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/12WLhD_OL1tg_sGXGCFj-l7wadaSgFkZPkbxPrSW2Ol4/edit#gid=731799384"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Mail ID": "={{ $('Loop Over Items').item.json[\"Mail ID\"] }}",
+            "Status": "Mail Sent",
+            "row_number": 0
+          },
+          "matchingColumns": [
+            "Mail ID"
+          ],
+          "schema": [
+            {
+              "id": "id",
+              "displayName": "id",
+              "required": false,
+              "defaultMatch": true,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "F Name",
+              "displayName": "F Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "L Name",
+              "displayName": "L Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Mail ID",
+              "displayName": "Mail ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "919922025916",
+              "displayName": "919922025916",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Company name",
+              "displayName": "Company name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "First Touch OE",
+              "displayName": "First Touch OE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Segment",
+              "displayName": "Segment",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Status",
+              "displayName": "Status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Distributed",
+              "displayName": "Distributed",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Added to WATI",
+              "displayName": "Added to WATI",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Remark",
+              "displayName": "Remark",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        1808,
+        416
+      ],
+      "id": "ce2d7f34-50ed-4e95-adaf-e561fb4de09d",
+      "name": "Append or update Status",
+      "retryOnFail": true,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "U7RjErXyIiSOwYqI",
+          "name": "Google Sheets account"
+        }
+      },
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.Segment }}",
+                    "rightValue": "COMP/IND_ACC (Not Connected)",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "18f52ab0-9ccd-4b5d-86c2-41521c223718"
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "7fadda74-ef9a-4d30-b969-28d3c2dd72d2",
+                    "leftValue": "={{ $json.Segment }}",
+                    "rightValue": "INV_NUM (Not Connected)",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "b5adc1f8-233c-4f89-aed5-0bd3d115d727",
+                    "leftValue": "={{ $json.Segment }}",
+                    "rightValue": "MAIL_ONLY (Connected)",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "9066d972-2b3a-42ac-98a6-2d0e3e6fe890",
+                    "leftValue": "={{ $json.Segment }}",
+                    "rightValue": "PAID_ACC (Not Connected)",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "ad1d0a65-9de1-4492-b720-a211c9fcda6c",
+                    "leftValue": "={{ $json.Segment }}",
+                    "rightValue": "Connected (Transferred to Sales)",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        976,
+        1664
+      ],
+      "id": "d125aa50-ec6d-41f2-a747-2fd2d43a6749",
+      "name": "Owner A1"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "f3c58c98-53d9-4557-a32b-4f0250e54d57",
+              "name": "subject",
+              "value": "=Your Onboarding with Utho - Next Steps",
+              "type": "string"
+            },
+            {
+              "id": "9a834a6b-5aba-43c6-8bfe-1d9218a4a38d",
+              "name": "body",
+              "value": "=<div style=\"font-family: Verdana, Geneva, sans-serif; font-size: small; color: #000000;\">\n  Hi {{ $json[\"F Name\"] && $json[\"F Name\"] !== \"NA\" ? $json[\"F Name\"] : \"there\" }}, \n  <br><br>\n\n  Thank you for your valuable time earlier. <br><br>\n\n  As discussed, we’ve shared your contact details with our dedicated onboarding team. <br>\n  One of our onboarding experts will be connecting with you soon. <br><br>\n\n  This expert will personally guide you through every step — from smooth onboarding and migration assistance \n  to ensuring all your requirements are handled seamlessly as you move to Utho. <br><br>\n\n  With <b>Utho – India’s Own Cloud Platform</b>, you can expect: <br><br>\n   • <b>High-Performance Infrastructure:</b> Experience faster workloads with optimized compute and networking. <br>\n  • <b>Cost Savings:</b> Reduce your cloud costs by up to 60% without compromising on quality. <br>\n  • <b>Simplified Cloud Management:</b> Enjoy an intuitive, easy-to-use platform that saves time and effort. <br>\n  • <b>24×7 Human Support:</b> Get real-time help from our team whenever you need it. <br><br>\n\n  If you’d like to explore more about how Utho can enhance your cloud experience, check out our demo videos here:\n  <a href=\"https://youtube.com/playlist?list=PLTFRICaijIE1Vgo1psK-GVqm-9ssnD9Cr&si=4FkZFBRMA8U344l0\" \n     style=\"color:#007bff; text-decoration:none;\"><b>Utho Product Walkthroughs & Tutorials</b></a> <br><br>\n\n  Meanwhile, if you need any immediate help or have specific requirements, <b>feel free to reach out to us at \n  <a href=\"mailto:support@utho.com\" style=\"color:#007bff;\">support@utho.com</a> </b>- our team will be happy to assist.\n<br><br>\nLooking forward to ensuring a smooth and successful onboarding experience for you. <br><br>\nWarm regards,\n<br><br>\n<b>Utkarsh Agrawal</b><br>\n  Onboarding Executive, Utho <br>\n  📞 9667583888 | 🌐 <a href=\"https://www.utho.com\" style=\"color:#007bff;\">www.utho.com</a> |\n  ✉️ <a href=\"mailto:utkarsh.a@utho.com\" style=\"color:#007bff;\">utkarsh.a@utho.com</a> <br>\n  Stellar 1425, Sector 142, Noida 201305\n</div>\n",
+              "type": "string"
+            },
+            {
+              "id": "6e7ab7b2-3115-43e0-895f-e427d2d24edf",
+              "name": "email",
+              "value": "={{ $json[\"Mail ID\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "c8698027-5aee-4e07-80a9-b5e675a71013",
+              "name": "Assigned By",
+              "value": "={{ $json[\"First Touch OE\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "0edb816e-53d2-4bc8-87af-9310b94b79f6",
+              "name": "Distributed",
+              "value": "={{ $json.Distributed }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1360,
+        944
+      ],
+      "id": "b409f81d-d2f0-4131-a80d-0a6382ddd655",
+      "name": "Connected (Transferred to Sales)"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "f3c58c98-53d9-4557-a32b-4f0250e54d57",
+              "name": "subject",
+              "value": "=Hello {{ $json[\"Company name\"] && $json[\"Company name\"] !== \"NA\" ? $json[\"Company name\"] : ($json[\"F Name\"] && $json[\"F Name\"] !== \"NA\" ? $json[\"F Name\"] : \"there\") }}, You Signed Up on Utho – Let’s Take the Next Step!",
+              "type": "string"
+            },
+            {
+              "id": "9a834a6b-5aba-43c6-8bfe-1d9218a4a38d",
+              "name": "body",
+              "value": "=<div style=\"font-family: Verdana, Geneva, sans-serif; font-size: small; color: #000000;\">\n  Hello {{ $json[\"Org Name\"] && $json[\"Org Name\"] !== \"NA\" ? $json[\"Org Name\"] : ($json[\"F Name\"] && $json[\"F Name\"] !== \"NA\" ? $json[\"F Name\"] : \"there\") }}, \n  <br><br>\n\n  Greetings from Utho! <br><br>\n\n  I’m Utkarsh, reaching out from <b>Utho – India’s Own Cloud Platform.</b> <br><br>\n\n  We noticed you recently signed up on our platform for cloud services. Thank you for considering us! <br><br>\n\n  We tried reaching out earlier, but it seems the contact number provided was invalid, so wasn’t able to connect. <br><br>\n\n  We’d love to understand your cloud requirements and discuss how Utho can simplify your journey and make it more efficient. <br><br>\n\n  Here’s what you can look forward to with Utho: <br><br>\n\n  • <b>Competitive Performance:</b> Boost your efficiency with our high-performance cloud servers. <br>\n  • <b>Cost Savings:</b> Reduce your cloud costs by up to 60% without any compromise on performance. <br>\n  • <b>User-Friendly Interface:</b> Save 80% of your time with our seamless and intuitive platform. <br>\n  • <b>24×7 Human Support:</b> Count on our dedicated team for assistance anytime you need. <br><br>\n\n  I’ve attached our company profile for you to explore and understand how we can add value to your cloud operations. <br><br>\n\n <a href=\"https://calendar.app.google/AxnhtL1mUZhR56Ah6\" \n   style=\"display:inline-block; background-color:#007bff; color:#fff; padding:10px 20px; \n          text-decoration:none; font-family: Verdana, Geneva, sans-serif; font-size: medium; \n          border-radius:6px; font-weight:bold;\">\n   Book a Meeting\n</a>\n<br><br>\n\n  Prefer email? Simply reply to this message with your requirements, and I’ll get back with a tailored quotation. <br><br>\n\n  Looking forward to connecting with you soon and exploring how Utho can support your goals. <br><br>\n\n  Regards, <br><br>\n  <b>Utkarsh Agrawal</b><br>\n  Onboarding Executive, Utho <br>\n  📞 9667583888 | 🌐 <a href=\"https://www.utho.com\" style=\"color:#007bff;\">www.utho.com</a> |\n  ✉️ <a href=\"mailto:utkarsh.a@utho.com\" style=\"color:#007bff;\">utkarsh.a@utho.com</a> <br>\n  Stellar 1425, Sector 142, Noida 201305\n</div>\n",
+              "type": "string"
+            },
+            {
+              "id": "6e7ab7b2-3115-43e0-895f-e427d2d24edf",
+              "name": "email",
+              "value": "={{ $json[\"Mail ID\"] }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1360,
+        320
+      ],
+      "id": "9ce31a78-3d19-41d8-92c4-cd870442f421",
+      "name": "INV_NUM (Not Connected)"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "f3c58c98-53d9-4557-a32b-4f0250e54d57",
+              "name": "subject",
+              "value": "=Your Onboarding with Utho - Next Steps",
+              "type": "string"
+            },
+            {
+              "id": "9a834a6b-5aba-43c6-8bfe-1d9218a4a38d",
+              "name": "body",
+              "value": "=<div style=\"font-family: Verdana, Geneva, sans-serif; font-size: small; color: #000000;\">\n  Hi {{ $json[\"F Name\"] && $json[\"F Name\"] !== \"NA\" ? $json[\"F Name\"] : \"there\" }}, \n  <br><br>\n\n  Thank you for your valuable time earlier. <br><br>\n\n  As discussed, we’ve shared your contact details with our dedicated onboarding team. <br>\n  One of our onboarding experts will be connecting with you soon. <br><br>\n\n  This expert will personally guide you through every step — from smooth onboarding and migration assistance \n  to ensuring all your requirements are handled seamlessly as you move to Utho. <br><br>\n\n  With <b>Utho – India’s Own Cloud Platform</b>, you can expect: <br><br>\n   • <b>High-Performance Infrastructure:</b> Experience faster workloads with optimized compute and networking. <br>\n  • <b>Cost Savings:</b> Reduce your cloud costs by up to 60% without compromising on quality. <br>\n  • <b>Simplified Cloud Management:</b> Enjoy an intuitive, easy-to-use platform that saves time and effort. <br>\n  • <b>24×7 Human Support:</b> Get real-time help from our team whenever you need it. <br><br>\n\n  If you’d like to explore more about how Utho can enhance your cloud experience, check out our demo videos here: <br> \n  <a href=\"https://youtube.com/playlist?list=PLTFRICaijIE1Vgo1psK-GVqm-9ssnD9Cr&si=4FkZFBRMA8U344l0\" \n     style=\"color:#007bff; text-decoration:none;\"><b>Utho Product Walkthroughs & Tutorials:</b></a> <br><br>\n\n  Meanwhile, if you need any immediate help or have specific requirements, <b>feel free to reach out to us at \n  <a href=\"mailto:support@utho.com\" style=\"color:#007bff;\">support@utho.com</a> </b>- our team will be happy to assist.\n<br><br>\nLooking forward to ensuring a smooth and successful onboarding experience for you. <br><br>\nWarm regards,\n<br><br>\n<b>Srishti Kumari</b><br>\n  Onboarding Executive, Utho <br>\n  📞 8527855534 | 🌐 <a href=\"https://www.utho.com\" style=\"color:#007bff;\">www.utho.com</a> |\n  ✉️ <a href=\"mailto:srishti.k@utho.com\" style=\"color:#007bff;\">srishti.k@utho.com</a> <br>\n  Stellar 1425, Sector 142, Noida 201305\n</div>\n",
+              "type": "string"
+            },
+            {
+              "id": "6e7ab7b2-3115-43e0-895f-e427d2d24edf",
+              "name": "email",
+              "value": "={{ $json[\"Mail ID\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "e85d080d-f076-45fc-87a9-0454d9aebdb8",
+              "name": "Assigned By",
+              "value": "={{ $json[\"First Touch OE\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "4e2686d8-484b-466b-8dab-d0103d1f00ce",
+              "name": "Distributed",
+              "value": "={{ $json.Distributed }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1200,
+        2288
+      ],
+      "id": "e733ffd2-cd72-4605-910a-c76710168c9d",
+      "name": "Connected (Transferred to Sales)1"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "f3c58c98-53d9-4557-a32b-4f0250e54d57",
+              "name": "subject",
+              "value": "=Hello {{ $json[\"Company name\"] && $json[\"Company name\"] !== \"NA\" ? $json[\"Company name\"] : ($json[\"F Name\"] && $json[\"F Name\"] !== \"NA\" ? $json[\"F Name\"] : \"there\") }}, You Signed Up on Utho – Let’s Take the Next Step!",
+              "type": "string"
+            },
+            {
+              "id": "9a834a6b-5aba-43c6-8bfe-1d9218a4a38d",
+              "name": "body",
+              "value": "=<div style=\"font-family: Verdana, Geneva, sans-serif; font-size: small; color: #000000;\">\n  Hello {{ $json[\"Org Name\"] && $json[\"Org Name\"] !== \"NA\" ? $json[\"Org Name\"] : ($json[\"F Name\"] && $json[\"F Name\"] !== \"NA\" ? $json[\"F Name\"] : \"there\") }}, \n  <br><br>\n\n  Greetings from Utho! <br><br>\n\n  I’m Srishti, reaching out from <b>Utho – India’s Own Cloud Platform.</b> <br><br>\n\n  We noticed you recently signed up on our platform for cloud services. Thank you for considering us! <br><br>\n\n  We tried reaching out earlier, but it seems the contact number provided was invalid, so wasn’t able to connect. <br><br>\n\n  We’d love to understand your cloud requirements and discuss how Utho can simplify your journey and make it more efficient. <br><br>\n\n  Here’s what you can look forward to with Utho: <br><br>\n\n  • <b>Competitive Performance:</b> Boost your efficiency with our high-performance cloud servers. <br>\n  • <b>Cost Savings:</b> Reduce your cloud costs by up to 60% without any compromise on performance. <br>\n  • <b>User-Friendly Interface:</b> Save 80% of your time with our seamless and intuitive platform. <br>\n  • <b>24×7 Human Support:</b> Count on our dedicated team for assistance anytime you need. <br><br>\n\n  I’ve attached our company profile for you to explore and understand how we can add value to your cloud operations. <br><br>\n\n <a href=\"https://calendar.app.google/AxnhtL1mUZhR56Ah6\" \n   style=\"display:inline-block; background-color:#007bff; color:#fff; padding:10px 20px; \n          text-decoration:none; font-family: Verdana, Geneva, sans-serif; font-size: medium; \n          border-radius:6px; font-weight:bold;\">\n   Book a Meeting\n</a>\n<br><br>\n\n  Prefer email? Simply reply to this message with your requirements, and I’ll get back with a tailored quotation. <br><br>\n\n  Looking forward to connecting with you soon and exploring how Utho can support your goals. <br><br>\n\n  Regards, <br><br>\n  <b>Srishti Kumari</b><br>\n  Onboarding Executive, Utho <br>\n  📞 8527855534 | 🌐 <a href=\"https://www.utho.com\" style=\"color:#007bff;\">www.utho.com</a> |\n  ✉️ <a href=\"mailto:srishti.k@utho.com\" style=\"color:#007bff;\">srishti.k@utho.com</a> <br>\n  Stellar 1425, Sector 142, Noida 201305\n</div>\n",
+              "type": "string"
+            },
+            {
+              "id": "6e7ab7b2-3115-43e0-895f-e427d2d24edf",
+              "name": "email",
+              "value": "={{ $json[\"Mail ID\"] }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1200,
+        1664
+      ],
+      "id": "e1aa7f69-6286-4163-872b-2347e1bd7e00",
+      "name": "INV_NUM (Not Connected)1"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "f3c58c98-53d9-4557-a32b-4f0250e54d57",
+              "name": "subject",
+              "value": "= Hello {{ $json[\"F Name\"] && $json[\"F Name\"] !== \"NA\" ? $json[\"F Name\"] : \"there\" }}, Thank You for Choosing Utho",
+              "type": "string"
+            },
+            {
+              "id": "9a834a6b-5aba-43c6-8bfe-1d9218a4a38d",
+              "name": "body",
+              "value": "=<div style=\"font-family: Verdana, Geneva, sans-serif; font-size: small; color: #000000;\">\n  Hello {{ $json[\"Company name\"] && $json[\"Company name\"] !== \"NA\" ? $json[\"Company name\"] : ($json[\"F Name\"] && $json[\"F Name\"] !== \"NA\" ? $json[\"F Name\"] : \"there\") }}, \n  <br><br>\n\n  Greetings from <b>Utho – India’s Own Cloud Platform!</b> <br><br>\n\n  I’m Utkarsh, reaching out from Utho. We noticed that you recently signed up on Utho — India’s Own Cloud Platform. <br><br>\n\n  Thank you for considering us! <br><br>\n\n  Utho has empowered <b>22,000+ users</b> to simplify their cloud infrastructure and reduce costs by up to <b>60%</b>, trusted by leading brands like Exotel, CallerDesk, FITJEE, Taurus Packaging, CallHippo, Study24x7, MadeEasy, and Zyro.\n\n<br><br>\n\nHere’s what you can expect with Utho:\n\n<br><br>\n\n  • <b>High-Performance Infrastructure:</b> Experience faster workloads with optimized compute and networking. <br>\n  • <b>Cost Savings:</b> Lower your cloud expenses significantly without compromising on quality. <br>\n  • <b>Simplified Cloud Management:</b> Manage everything easily with our intuitive platform. <br>\n  • <b>24×7 Human Support:</b> Get real-time assistance from our expert team whenever you need it. <br><br>\n\n  I’d love to invite you for a quick <b>15-minute discovery call</b> where we can: <br><br>\n\n  • Understand your company’s specific use case <br>\n  • Share how Utho can add value to your business <br><br>\n\n <a href=\"https://calendar.app.google/AxnhtL1mUZhR56Ah6\" \n   style=\"display:inline-block; background-color:#007bff; color:#fff; padding:10px 20px; \n          text-decoration:none; font-family: Verdana, Geneva, sans-serif; font-size: medium; \n          border-radius:6px; font-weight:bold;\">\n   Book a Meeting\n</a><br><br>\n\n  Alternatively, just reply to this email with your requirements, and I’ll be happy to share a tailored solution. <br><br>\n\n  Looking forward to connecting with you soon! <br><br>\n\n  Warm regards, <br><br>\n  <b>Utkarsh Agrawal</b><br>\n  Onboarding Executive, Utho <br>\n  📞 9667583888 | 🌐 <a href=\"https://www.utho.com\" style=\"color:#007bff;\">www.utho.com</a> |\n  ✉️ <a href=\"mailto:utkarsh.a@utho.com\" style=\"color:#007bff;\">utkarsh.a@utho.com</a> <br>\n  Stellar 1425, Sector 142, Noida 201305\n</div>\n",
+              "type": "string"
+            },
+            {
+              "id": "6e7ab7b2-3115-43e0-895f-e427d2d24edf",
+              "name": "email",
+              "value": "={{ $json[\"Mail ID\"] }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1360,
+        128
+      ],
+      "id": "18a615e2-49ad-4f9d-8b90-c46311bfbf6d",
+      "name": "COMP/IND_ACC (Not Connected)"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "f3c58c98-53d9-4557-a32b-4f0250e54d57",
+              "name": "subject",
+              "value": "=Reduce your Cloud Costs by 60% with Utho",
+              "type": "string"
+            },
+            {
+              "id": "9a834a6b-5aba-43c6-8bfe-1d9218a4a38d",
+              "name": "body",
+              "value": "=<div style=\"font-family: Verdana, Geneva, sans-serif; font-size: small; color: #000000;\">\n  Hi {{ $json[\"F Name\"] && $json[\"F Name\"] !== \"NA\" ? $json[\"F Name\"] : \"there\" }}, \n  <br><br>\n\n  Thank you for your time over the call earlier. <br><br>\n\n  As discussed, since you prefer email communication only, I’m reaching out here to keep things convenient for you. <br><br>\n\n  At a glance, we at <b>Utho – India’s Own Cloud Platform</b> help businesses simplify their cloud infrastructure while saving up to <b>60%</b> on costs — without compromising on performance, reliability, or support. <br><br>\n\n  Here’s what Utho can help you with: <br>\n   • <b>High-Performance Infrastructure:</b> Experience faster workloads with optimized compute and networking. <br>\n  • <b>Cost Savings:</b> Reduce your cloud costs by up to 60% without compromising on quality. <br>\n  • <b>Simplified Cloud Management:</b> Enjoy an intuitive, easy-to-use platform that saves time and effort. <br>\n  • <b>24×7 Human Support:</b> Get real-time help from our team whenever you need it. <br><br>\n\n  As discussed, I’ve attached our company profile for your reference. <br><br>\n\n  Whenever you need assistance, <b>you can simply raise a ticket by emailing \n  <a href=\"mailto:support@utho.com\" style=\"color:#007bff;\">support@utho.com</a></b>-\n  our team will take it up immediately. <br><br>\n\n  If at any point you’d like to see a demo, you can:\n  <a href=\"https://youtube.com/playlist?list=PLTFRICaijIE1Vgo1psK-GVqm-9ssnD9Cr&si=4FkZFBRMA8U344l0\" \n     style=\"color:#007bff; text-decoration:none;\"><b>Explore our YouTube playlist</b></a> <br><br>\n\n  If you have any specific requirements, simply reply to this email, and I’ll personally assist you. <br><br>\n\n  Looking forward to helping you make the most of Utho’s cloud solutions. <br><br>\n\n  Warm regards, <br><br>\n  <b>Utkarsh Agrawal</b><br>\n  Onboarding Executive, Utho <br>\n  📞 9667583888 | 🌐 <a href=\"https://www.utho.com\" style=\"color:#007bff;\">www.utho.com</a> |\n  ✉️ <a href=\"mailto:utkarsh.a@utho.com\" style=\"color:#007bff;\">utkarsh.a@utho.com</a> <br>\n  Stellar 1425, Sector 142, Noida 201305\n</div>\n",
+              "type": "string"
+            },
+            {
+              "id": "6e7ab7b2-3115-43e0-895f-e427d2d24edf",
+              "name": "email",
+              "value": "={{ $json[\"Mail ID\"] }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1360,
+        512
+      ],
+      "id": "f5c4ad48-4dda-4e1d-ae03-efbbfd824caf",
+      "name": "MAIL_ONLY (Connected)"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "f3c58c98-53d9-4557-a32b-4f0250e54d57",
+              "name": "subject",
+              "value": "=You Signed Up on Utho – Let’s Take the Next Step!",
+              "type": "string"
+            },
+            {
+              "id": "9a834a6b-5aba-43c6-8bfe-1d9218a4a38d",
+              "name": "body",
+              "value": "=<div style=\"font-family: Verdana, Geneva, sans-serif; font-size: small; color: #000000;\">\n  Hello {{ $json[\"Company name\"] && $json[\"Company name\"] !== \"NA\" ? $json[\"Company name\"] : ($json[\"F Name\"] && $json[\"F Name\"] !== \"NA\" ? $json[\"F Name\"] : \"there\") }}, \n  <br><br>\n\n  Greetings from <b>Utho – India’s Own Cloud Platform!</b> <br><br>\n\n  I’m Utkarsh from the onboarding team. We noticed you’ve recently added funds to your Utho account, and I wanted to personally thank you for choosing us as your cloud provider. <br><br>\n\n  I did try reaching out earlier but couldn’t connect. I’d love to understand your cloud goals and share how Utho can help you make the most out of your investment. <br><br>\n\n  Here’s what you can expect with Utho: <br><br>\n\n  • <b>High Performance:</b> Run your workloads faster with our powerful and optimized cloud servers. <br>\n  • <b>Up to 60% Cost Savings:</b> Cut your cloud spend without compromising on performance or reliability. <br>\n  • <b>Simple & Time-Saving:</b> Save up to 80% of your time managing cloud infrastructure with our intuitive platform. <br>\n  • <b>24×7 Human Support:</b> Our dedicated support engineers are always available to assist you. <br><br>\n\n  To help you get started smoothly, here are a few useful links: <br><br>\n\n • <a href=\"https://youtube.com/playlist?list=PLTFRICaijIE1Vgo1psK-GVqm-9ssnD9Cr&si=4FkZFBRMA8U344l0\" \n     style=\"color:#007bff; text-decoration:none; font-weight:bold;\">\n     Explore Utho’s Product Demos\n  </a>- Quick walkthroughs of our platform, products, and use cases <br>\n\n• <a href=\"https://calendar.app.google/AxnhtL1mUZhR56Ah6\" \n     style=\"color:#007bff; text-decoration:none; font-weight:bold;\">\n     Book a Quick Discovery Call\n  </a>- Connect with us to discuss your setup and requirements\n <br><br>\n\n  Need assistance? <b>Simply reply to this email or reach out anytime at \n  <a href=\"mailto:support@utho.com\" style=\"color:#007bff;\">support@utho.com</a></b><br><br>\n\n  We’re excited to see what you’ll build with Utho and are here to ensure your experience is seamless from day one. <br><br>\n\n  Warm regards, <br><br>\n  <b>Utkarsh Agrawal</b><br>\n  Onboarding Executive, Utho <br>\n  📞 9667583888 | 🌐 <a href=\"https://www.utho.com\" style=\"color:#007bff;\">www.utho.com</a> |\n  ✉️ <a href=\"mailto:utkarsh.a@utho.com\" style=\"color:#007bff;\">utkarsh.a@utho.com</a> <br>\n  Stellar 1425, Sector 142, Noida 201305\n</div>\n",
+              "type": "string"
+            },
+            {
+              "id": "6e7ab7b2-3115-43e0-895f-e427d2d24edf",
+              "name": "email",
+              "value": "={{ $json['Mail ID'] }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1360,
+        704
+      ],
+      "id": "2695e228-4ded-412b-b47d-92ef28a75fd1",
+      "name": "PAID_ACC (Not Connected)"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "f3c58c98-53d9-4557-a32b-4f0250e54d57",
+              "name": "subject",
+              "value": "= Hello {{ $json[\"F Name\"] && $json[\"F Name\"] !== \"NA\" ? $json[\"F Name\"] : \"there\" }},Thank You for Choosing Utho",
+              "type": "string"
+            },
+            {
+              "id": "9a834a6b-5aba-43c6-8bfe-1d9218a4a38d",
+              "name": "body",
+              "value": "=<div style=\"font-family: Verdana, Geneva, sans-serif; font-size: small; color: #000000;\">\n  Hello {{ $json[\"Company name\"] && $json[\"Company name\"] !== \"NA\" ? $json[\"Company name\"] : ($json[\"F Name\"] && $json[\"F Name\"] !== \"NA\" ? $json[\"F Name\"] : \"there\") }}, \n  <br><br>\n\n  Greetings from <b>Utho – India’s Own Cloud Platform!</b> <br><br>\n\n  I’m Srishti, reaching out from Utho. We noticed that you recently signed up on Utho — India’s Own Cloud Platform. <br><br>\n\n  Thank you for considering us! <br><br>\n\n  Utho has empowered <b>22,000+ users</b> to simplify their cloud infrastructure and reduce costs by up to <b>60%</b>, trusted by leading brands like Exotel, CallerDesk, FITJEE, Taurus Packaging, CallHippo, Study24x7, MadeEasy, and Zyro. <br><br>\nHere’s what you can expect with Utho: <br><br>\n\n  • <b>High-Performance Infrastructure:</b> Experience faster workloads with optimized compute and networking. <br>\n  • <b>Cost Savings:</b> Lower your cloud expenses significantly without compromising on quality. <br>\n  • <b>Simplified Cloud Management:</b> Manage everything easily with our intuitive platform. <br>\n  • <b>24×7 Human Support:</b> Get real-time assistance from our expert team whenever you need it. <br><br>\n\n  I’d love to invite you for a quick <b>15-minute discovery call</b> where we can: <br><br>\n\n  • Understand your company’s specific use case <br>\n  • Share how Utho can add value to your business <br><br>\n\n <a href=\"https://calendar.app.google/AxnhtL1mUZhR56Ah6\" \n   style=\"display:inline-block; background-color:#007bff; color:#fff; padding:10px 20px; \n          text-decoration:none; font-family: Verdana, Geneva, sans-serif; font-size: medium; \n          border-radius:6px; font-weight:bold;\">\n   Book a Meeting\n</a><br><br>\n\n  Alternatively, just reply to this email with your requirements, and I’ll be happy to share a tailored solution. <br><br>\n\n  Looking forward to connecting with you soon! <br><br>\n\n  Warm regards, <br><br>\n  <b>Srishti Kumari</b><br>\n  Onboarding Executive, Utho <br>\n  📞 8527855534 | 🌐 <a href=\"https://www.utho.com\" style=\"color:#007bff;\">www.utho.com</a> |\n  ✉️ <a href=\"mailto:srishti.k@utho.com\" style=\"color:#007bff;\">srishti.k@utho.com</a> <br>\n  Stellar 1425, Sector 142, Noida 201305\n</div>\n",
+              "type": "string"
+            },
+            {
+              "id": "6e7ab7b2-3115-43e0-895f-e427d2d24edf",
+              "name": "email",
+              "value": "={{ $json[\"Mail ID\"] }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1200,
+        1472
+      ],
+      "id": "7f5649af-e0bf-4cb3-b9b3-cf728bc65466",
+      "name": "COMP/IND_ACC (Not Connected)1"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "f3c58c98-53d9-4557-a32b-4f0250e54d57",
+              "name": "subject",
+              "value": "=Reduce your Cloud Costs by 60% with Utho",
+              "type": "string"
+            },
+            {
+              "id": "9a834a6b-5aba-43c6-8bfe-1d9218a4a38d",
+              "name": "body",
+              "value": "=<div style=\"font-family: Verdana, Geneva, sans-serif; font-size: small; color: #000000;\">\n  Hi {{ $json[\"F Name\"] && $json[\"F Name\"] !== \"NA\" ? $json[\"F Name\"] : \"there\" }}, \n  <br><br>\n\n  Thank you for your time over the call earlier. <br><br>\n\n  As discussed, since you prefer email communication only, I’m reaching out here to keep things convenient for you. <br><br>\n\n  At a glance, we at <b>Utho – India’s Own Cloud Platform</b> help businesses simplify their cloud infrastructure while saving up to <b>60%</b> on costs — without compromising on performance, reliability, or support. <br><br>\n\n  Here’s what Utho can help you with: <br>\n   • <b>High-Performance Infrastructure:</b> Experience faster workloads with optimized compute and networking. <br>\n  • <b>Cost Savings:</b> Reduce your cloud costs by up to 60% without compromising on quality. <br>\n  • <b>Simplified Cloud Management:</b> Enjoy an intuitive, easy-to-use platform that saves time and effort. <br>\n  • <b>24×7 Human Support:</b> Get real-time help from our team whenever you need it. <br><br>\n\n  As discussed, I’ve attached our company profile for your reference. <br><br>\n\n  Whenever you need assistance, <b>you can simply raise a ticket by emailing \n  <a href=\"mailto:support@utho.com\" style=\"color:#007bff;\">support@utho.com</a></b>-\n  our team will take it up immediately. <br><br>\n\n  If at any point you’d like to see a demo, you can:\n  <a href=\"https://youtube.com/playlist?list=PLTFRICaijIE1Vgo1psK-GVqm-9ssnD9Cr&si=4FkZFBRMA8U344l0\" \n     style=\"color:#007bff; text-decoration:none;\"><b>Explore our YouTube playlist</b></a> <br><br>\n\n  If you have any specific requirements, simply reply to this email, and I’ll personally assist you. <br><br>\n\n  Looking forward to helping you make the most of Utho’s cloud solutions. <br><br>\n\n  Warm regards, <br><br>\n  <b>Srishti Kumari</b><br>\n  Onboarding Executive, Utho <br>\n  📞 8527855534 | 🌐 <a href=\"https://www.utho.com\" style=\"color:#007bff;\">www.utho.com</a> |\n  ✉️ <a href=\"mailto:srishti.k@utho.com\" style=\"color:#007bff;\">srishti.k@utho.com</a> <br>\n  Stellar 1425, Sector 142, Noida 201305\n</div>\n",
+              "type": "string"
+            },
+            {
+              "id": "6e7ab7b2-3115-43e0-895f-e427d2d24edf",
+              "name": "email",
+              "value": "={{ $json[\"Mail ID\"] }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1200,
+        1856
+      ],
+      "id": "720905eb-7d1f-4af6-b199-32f1de59e997",
+      "name": "MAIL_ONLY (Connected)1"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "f3c58c98-53d9-4557-a32b-4f0250e54d57",
+              "name": "subject",
+              "value": "=You Signed Up on Utho – Let’s Take the Next Step!",
+              "type": "string"
+            },
+            {
+              "id": "9a834a6b-5aba-43c6-8bfe-1d9218a4a38d",
+              "name": "body",
+              "value": "=<div style=\"font-family: Verdana, Geneva, sans-serif; font-size: small; color: #000000;\">\n  Hello {{ $json[\"Company name\"] && $json[\"Company name\"] !== \"NA\" ? $json[\"Company name\"] : ($json[\"F Name\"] && $json[\"F Name\"] !== \"NA\" ? $json[\"F Name\"] : \"there\") }}, \n  <br><br>\n\n  Greetings from <b>Utho – India’s Own Cloud Platform!</b> <br><br>\n\n  I’m Srishti from the onboarding team. We noticed you’ve recently added funds to your Utho account, and I wanted to personally thank you for choosing us as your cloud provider. <br><br>\n\n  I did try reaching out earlier but couldn’t connect. I’d love to understand your cloud goals and share how Utho can help you make the most out of your investment. <br><br>\n\n  Here’s what you can expect with Utho: <br><br>\n\n  • <b>High Performance:</b> Run your workloads faster with our powerful and optimized cloud servers. <br>\n  • <b>Up to 60% Cost Savings:</b> Cut your cloud spend without compromising on performance or reliability. <br>\n  • <b>Simple & Time-Saving:</b> Save up to 80% of your time managing cloud infrastructure with our intuitive platform. <br>\n  • <b>24×7 Human Support:</b> Our dedicated support engineers are always available to assist you. <br><br>\n\n  To help you get started smoothly, here are a few useful links: <br><br>\n\n • <a href=\"https://youtube.com/playlist?list=PLTFRICaijIE1Vgo1psK-GVqm-9ssnD9Cr&si=4FkZFBRMA8U344l0\" \n     style=\"color:#007bff; text-decoration:none; font-weight:bold;\">\n     Explore Utho’s Product Demos\n  </a>- Quick walkthroughs of our platform, products, and use cases <br>\n\n• <a href=\"https://calendar.app.google/AxnhtL1mUZhR56Ah6\" \n     style=\"color:#007bff; text-decoration:none; font-weight:bold;\">\n     Book a Quick Discovery Call\n  </a>- Connect with us to discuss your setup and requirements\n <br><br>\n\n  Need assistance? <b>Simply reply to this email or reach out anytime at \n  <a href=\"mailto:support@utho.com\" style=\"color:#007bff;\">support@utho.com</a></b><br><br>\n\n  We’re excited to see what you’ll build with Utho and are here to ensure your experience is seamless from day one. <br><br>\n\n  Warm regards, <br><br>\n  <b>Srishti Kumari</b><br>\n  Onboarding Executive, Utho <br>\n  📞 8527855534 | 🌐 <a href=\"https://www.utho.com\" style=\"color:#007bff;\">www.utho.com</a> |\n  ✉️ <a href=\"mailto:srishti.k@utho.com\" style=\"color:#007bff;\">srishti.k@utho.com</a> <br>\n  Stellar 1425, Sector 142, Noida 201305\n</div>\n",
+              "type": "string"
+            },
+            {
+              "id": "6e7ab7b2-3115-43e0-895f-e427d2d24edf",
+              "name": "email",
+              "value": "={{ $json['Mail ID'] }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1200,
+        2048
+      ],
+      "id": "491458f3-4504-48cb-8824-106593dcc4c9",
+      "name": "PAID_ACC (Not Connected)1"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Function to check if a value is truly empty (but NOT \"NA\")\nfunction isTrulyEmpty(value) {\n  return value === undefined || value === null || value === '';\n}\n\n// Filter all items\nconst validItems = items.filter(item => {\n  const data = item.json;\n  const fields = Object.keys(data);\n\n  // Identify which fields are empty\n  const emptyFields = fields.filter(field => isTrulyEmpty(data[field]));\n\n  // Fields allowed to remain empty\n  const allowedEmpty = ['Distributed', 'Added to WATI', 'Remark'];\n\n  // 1. keep if no empty fields\n  // 2. keep if every empty field is one of the allowed ones\n  const allEmptyAreAllowed = emptyFields.every(f => allowedEmpty.includes(f));\n\n  return emptyFields.length === 0 || allEmptyAreAllowed;\n});\n\n// Pass only valid rows forward\nreturn validItems;\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -48,
+        1856
+      ],
+      "id": "a2d0fbe4-85d4-40e9-b1a4-a44aa2bd964d",
+      "name": "Validation"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -720,
+        1856
+      ],
+      "id": "23a05a5d-588e-4f38-a764-93fd5a47574f",
+      "name": "Schedule after Every 5m",
+      "retryOnFail": true
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "de8f11bc-680e-41ab-9655-b5fae98fc286",
+              "leftValue": "={{ $json.Distributed }}",
+              "rightValue": "Yes",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1776,
+        1568
+      ],
+      "id": "3ba0ed59-e7fc-4be6-be5d-fe555f6d5dee",
+      "name": "If1"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "12WLhD_OL1tg_sGXGCFj-l7wadaSgFkZPkbxPrSW2Ol4",
+          "mode": "list",
+          "cachedResultName": "Mailing Data (Signup Leads ) - Inbound ",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/12WLhD_OL1tg_sGXGCFj-l7wadaSgFkZPkbxPrSW2Ol4/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 731799384,
+          "mode": "list",
+          "cachedResultName": "Auto Mailer ",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/12WLhD_OL1tg_sGXGCFj-l7wadaSgFkZPkbxPrSW2Ol4/edit#gid=731799384"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Distributed": "Yes",
+            "Mail ID": "={{ $json.email }}"
+          },
+          "matchingColumns": [
+            "Mail ID"
+          ],
+          "schema": [
+            {
+              "id": "id",
+              "displayName": "id",
+              "required": false,
+              "defaultMatch": true,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "F Name",
+              "displayName": "F Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "L Name",
+              "displayName": "L Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Mail ID",
+              "displayName": "Mail ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Contact No",
+              "displayName": "Contact No",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Company name",
+              "displayName": "Company name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "First Touch OE",
+              "displayName": "First Touch OE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Segment",
+              "displayName": "Segment",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Status",
+              "displayName": "Status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Distributed",
+              "displayName": "Distributed",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Added to WATI",
+              "displayName": "Added to WATI",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Remark",
+              "displayName": "Remark",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        1808,
+        992
+      ],
+      "id": "2e0dc834-c7a0-48f8-8b27-750a9e231d3b",
+      "name": "Update Distribution in sheet",
+      "retryOnFail": true,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "U7RjErXyIiSOwYqI",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1j9oH7Z4njN_3k57KvJEBNjGNWevNCpLyC18as4Vps2g",
+          "mode": "list",
+          "cachedResultName": "Signup Leads",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1j9oH7Z4njN_3k57KvJEBNjGNWevNCpLyC18as4Vps2g/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 321774302,
+          "mode": "list",
+          "cachedResultName": "Distribution",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1j9oH7Z4njN_3k57KvJEBNjGNWevNCpLyC18as4Vps2g/edit#gid=321774302"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Email": "={{ $json.email }}",
+            "Assigned By": "={{ $json[\"Assigned By\"] }}",
+            "Date ": "={{ $now.setZone(\"Asia/Kolkata\").format(\"d MMMM yyyy\") }}",
+            "Status": "New",
+            "Remark": "={{ $('Switch Owner').item.json.Remark }}"
+          },
+          "matchingColumns": [
+            "Email"
+          ],
+          "schema": [
+            {
+              "id": "Date ",
+              "displayName": "Date ",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Email",
+              "displayName": "Email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Assigned To",
+              "displayName": "Assigned To",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Assigned By",
+              "displayName": "Assigned By",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Status",
+              "displayName": "Status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Remark",
+              "displayName": "Remark",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        2064,
+        1728
+      ],
+      "id": "5b6945f3-a80a-4099-b76b-c6c76e4d229a",
+      "name": "Add in Signup Lead sheet",
+      "retryOnFail": true,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "U7RjErXyIiSOwYqI",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "select": "user",
+        "user": {
+          "__rl": true,
+          "value": "U09FR9SV42X",
+          "mode": "list",
+          "cachedResultName": "vishal.m"
+        },
+        "text": "=*Something went wrong in the *Brevo Node* Please check\n\n🚨 Email sending failed in *Send email by Srishti* node  \nError: {{$json[\"error\"][\"message\"]}}\n",
+        "otherOptions": {
+          "includeLinkToWorkflow": false
+        }
+      },
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.3,
+      "position": [
+        1808,
+        800
+      ],
+      "id": "1dc3bad2-4321-4ebc-9c90-57837cec5c4b",
+      "name": "Send a message1",
+      "webhookId": "0e0f89cc-0e8f-43cc-b155-a1e154a13a27",
+      "retryOnFail": true,
+      "credentials": {
+        "slackApi": {
+          "id": "NmpE1ndwULKXfK7o",
+          "name": "Slack account for DM"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "amount": 10
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        1584,
+        992
+      ],
+      "id": "57134327-539f-4791-a658-cd65f747c961",
+      "name": "Wait",
+      "webhookId": "0af2a818-63ce-4ac4-962e-14bb137f39df",
+      "retryOnFail": true
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "12WLhD_OL1tg_sGXGCFj-l7wadaSgFkZPkbxPrSW2Ol4",
+          "mode": "list",
+          "cachedResultName": "Mailing Data (Signup Leads ) - Inbound ",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/12WLhD_OL1tg_sGXGCFj-l7wadaSgFkZPkbxPrSW2Ol4/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 731799384,
+          "mode": "list",
+          "cachedResultName": "Auto Mailer ",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/12WLhD_OL1tg_sGXGCFj-l7wadaSgFkZPkbxPrSW2Ol4/edit#gid=731799384"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -496,
+        1856
+      ],
+      "id": "2f1fff64-80a7-4d94-89c6-102715109e46",
+      "name": "Get row(s) in sheet",
+      "retryOnFail": true,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "U7RjErXyIiSOwYqI",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.filter(item => {\n  const status = (item.json.Status || \"\").trim().toLowerCase();\n  return status === \"new\";\n});\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -272,
+        1856
+      ],
+      "id": "fb2726ea-9f69-48ce-859b-841ccf8b1372",
+      "name": "Cheking Status"
+    },
+    {
+      "parameters": {
+        "amount": 1,
+        "unit": "minutes"
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        2032,
+        992
+      ],
+      "id": "4aeec3ee-b9ec-457b-aa94-a0baac6579d2",
+      "name": "Wait for 1m",
+      "webhookId": "8f984e61-c16e-4524-9bd7-f728e4f73ecf"
+    },
+    {
+      "parameters": {
+        "select": "user",
+        "user": {
+          "__rl": true,
+          "value": "U09FR9SV42X",
+          "mode": "list",
+          "cachedResultName": "vishal.m"
+        },
+        "text": ":point_right:*Something Went Wrong to Sending Msg to Pooja*",
+        "otherOptions": {
+          "includeLinkToWorkflow": false
+        }
+      },
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.3,
+      "position": [
+        2512,
+        1728
+      ],
+      "id": "e78df2e1-f4a8-41de-b1fc-100e4e95a09c",
+      "name": "Send a message3",
+      "webhookId": "6b5030d6-597d-4ad3-8871-4c4e944e9643",
+      "retryOnFail": true,
+      "credentials": {
+        "slackApi": {
+          "id": "NmpE1ndwULKXfK7o",
+          "name": "Slack account for DM"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "select": "user",
+        "user": {
+          "__rl": true,
+          "value": "U08LM3TB6ET",
+          "mode": "list",
+          "cachedResultName": "pooja.k"
+        },
+        "text": "=:warning: Important:\n\n*New lead added to the Allocation Sheet!*\n\n*Email: {{ $json.Email }}*\n\n*:point_right:Please assign it to a sales representative as per the schedule.*\n\n",
+        "otherOptions": {
+          "includeLinkToWorkflow": false
+        }
+      },
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.3,
+      "position": [
+        2288,
+        1728
+      ],
+      "id": "1820eda0-88ac-48d7-8e5c-86c9f0b74316",
+      "name": "Msg to Pooja",
+      "webhookId": "d4036d5f-ceff-47a6-b649-b2c710d6f9c1",
+      "retryOnFail": true,
+      "credentials": {
+        "slackApi": {
+          "id": "NmpE1ndwULKXfK7o",
+          "name": "Slack account for DM"
+        }
+      },
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "sendHTML": true,
+        "subject": "={{ $json.subject }}",
+        "htmlContent": "={{ $json.body }}",
+        "sender": "utkarsh.a@utho.io",
+        "receipients": "={{ $json.email }}",
+        "additionalFields": {},
+        "requestOptions": {}
+      },
+      "type": "n8n-nodes-base.sendInBlue",
+      "typeVersion": 1,
+      "position": [
+        1584,
+        320
+      ],
+      "id": "cc0db71e-f980-4830-b605-077e9079cac2",
+      "name": "Send email by Utkarsh",
+      "retryOnFail": true,
+      "credentials": {
+        "sendInBlueApi": {
+          "id": "GRqFRLkcv28HZWJi",
+          "name": "Brevo account"
+        }
+      },
+      "onError": "continueErrorOutput"
+    }
+  ],
+  "connections": {
+    "Owner A": {
+      "main": [
+        [
+          {
+            "node": "COMP/IND_ACC (Not Connected)",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "INV_NUM (Not Connected)",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "MAIL_ONLY (Connected)",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "PAID_ACC (Not Connected)",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Connected (Transferred to Sales)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch Owner": {
+      "main": [
+        [
+          {
+            "node": "Owner A",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Owner A1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Switch Owner",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send email by Srishti": {
+      "main": [
+        [
+          {
+            "node": "Append or update Status",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send a message1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append or update Status": {
+      "main": [
+        [
+          {
+            "node": "Wait for 1m",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        []
+      ]
+    },
+    "Owner A1": {
+      "main": [
+        [
+          {
+            "node": "COMP/IND_ACC (Not Connected)1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "INV_NUM (Not Connected)1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "MAIL_ONLY (Connected)1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "PAID_ACC (Not Connected)1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Connected (Transferred to Sales)1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Connected (Transferred to Sales)": {
+      "main": [
+        [
+          {
+            "node": "Send email by Utkarsh",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "If1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "INV_NUM (Not Connected)": {
+      "main": [
+        [
+          {
+            "node": "Send email by Utkarsh",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Connected (Transferred to Sales)1": {
+      "main": [
+        [
+          {
+            "node": "Send email by Srishti",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "If1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "INV_NUM (Not Connected)1": {
+      "main": [
+        [
+          {
+            "node": "Send email by Srishti",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "COMP/IND_ACC (Not Connected)": {
+      "main": [
+        [
+          {
+            "node": "Send email by Utkarsh",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "MAIL_ONLY (Connected)": {
+      "main": [
+        [
+          {
+            "node": "Send email by Utkarsh",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "PAID_ACC (Not Connected)": {
+      "main": [
+        [
+          {
+            "node": "Send email by Utkarsh",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "COMP/IND_ACC (Not Connected)1": {
+      "main": [
+        [
+          {
+            "node": "Send email by Srishti",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "MAIL_ONLY (Connected)1": {
+      "main": [
+        [
+          {
+            "node": "Send email by Srishti",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "PAID_ACC (Not Connected)1": {
+      "main": [
+        [
+          {
+            "node": "Send email by Srishti",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Validation": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule after Every 5m": {
+      "main": [
+        [
+          {
+            "node": "Get row(s) in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If1": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Add in Signup Lead sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Add in Signup Lead sheet": {
+      "main": [
+        [
+          {
+            "node": "Msg to Pooja",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "Update Distribution in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get row(s) in sheet": {
+      "main": [
+        [
+          {
+            "node": "Cheking Status",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cheking Status": {
+      "main": [
+        [
+          {
+            "node": "Validation",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait for 1m": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Msg to Pooja": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Send a message3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send email by Utkarsh": {
+      "main": [
+        [
+          {
+            "node": "Append or update Status",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send a message1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "fe7e7b2647fbef44c9dba2dd1a066ce0cfd66021aedaf2701ac645ebb49cce5b"
+  }
+}
